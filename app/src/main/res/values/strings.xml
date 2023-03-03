@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NYC Schools</string>
+
+    <!-- School models -->
+    <string name="id_prefix">#%s</string>
+    <string name="sat_reading_label">SAT Reading Avg:</string>
+    <string name="sat_math_label">SAT Math Avg:</string>
+    <string name="sat_writing_label">SAT Writing Avg:</string>
+
+    <!-- Editor defaults -->
+    <string name="default_name">North Olmsted High School</string>
+    <string name="default_dbn"># 0000</string>
+    <string name="default_overview">Go Eagles</string>
+    <string name="default_location">North Olmsted</string>
+    <string name="default_phone_number">440–777–7777</string>
+    <string name="default_score">500</string>
+
+</resources>

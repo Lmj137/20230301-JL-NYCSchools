@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_school_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            style="@style/TextviewMajor"
+            android:id="@+id/school_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/default_name"/>
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/sat_reading_label"
+            android:text="@string/sat_reading_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/school_name"/>
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/sat_math_label"
+            android:text="@string/sat_math_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sat_reading_label"/>
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/sat_writing_label"
+            android:text="@string/sat_writing_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sat_math_label"/>
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/sat_critical_reading_avg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/sat_reading_label"
+            app:layout_constraintTop_toBottomOf="@+id/school_name"
+            tools:text="@string/default_score"/>
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/sat_math_avg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/sat_math_label"
+            app:layout_constraintTop_toBottomOf="@+id/sat_critical_reading_avg"
+            tools:text="@string/default_score"/>
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/sat_writing_avg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/sat_writing_label"
+            app:layout_constraintTop_toBottomOf="@+id/sat_math_avg"
+            tools:text="@string/default_score"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

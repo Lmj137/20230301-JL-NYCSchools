@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item">
+
+    <data>
+        <variable
+            name="model"
+            type="com.studio99.d20230301_jl_nycschools.models.SchoolOverview" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:layout_gravity="center"
+        android:onClick="@{ () -> model.clickAction.invoke() }"
+        app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextviewMajor"
+            android:id="@+id/school_name"
+            android:text="@{model.schoolName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/default_name" />
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/dbn"
+            android:text="@{@string/id_prefix(model.dbn)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/default_dbn" />
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/location"
+            android:text="@{model.location}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/default_location" />
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/overview_paragraph"
+            android:text="@{model.overviewParagraph}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/default_overview" />
+
+        <TextView
+            style="@style/TextviewBase"
+            android:id="@+id/phone_number"
+            android:text="@{model.phoneNumber}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/default_phone_number" />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
